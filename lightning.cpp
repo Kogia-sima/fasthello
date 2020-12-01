@@ -38,7 +38,7 @@ int main() {
   int num_len = 1;
   const char prefix[] = "Hello, ";
   const size_t LINE_MAX_LEN = 17;
-  for (unsigned int i = 0; i < 100'000'000; ++i) {
+  for (unsigned int i = 0; i < 10'000'000; ++i) {
     buffer.extend(prefix, sizeof(prefix) - 1);
     buffer.extend(num + sizeof(num) - 1 - num_len, num_len);
     num_len = std::max(num_len, increase_str_num(num, sizeof(num) - 1));

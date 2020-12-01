@@ -39,12 +39,12 @@ fn push_hello(buf: &mut Buffer, num: u32) {
 
 fn main() {
     const BUFSIZ: usize = libc::BUFSIZ as usize;
-    const TARGET: u32 = 100_000_000;
+    const TARGET: u32 = 10_000_000;
     let mut buf = Buffer::new(BUFSIZ, libc::STDOUT_FILENO);
     buf.enqueue(b"Hello, 0");
     let mut i = 1;
     const PREFIX_SIZE: usize = 1 + 7; // b"\tHello, ".len();
-    const NUM_LEN: usize = 9; // b"100000000".len();
+    const NUM_LEN: usize = 9; // b"10000000".len();
     'done: while i < TARGET {
         while i < TARGET
             && BUFSIZ > buf.bytes.len() + PREFIX_SIZE + NUM_LEN

@@ -34,7 +34,7 @@ fn main() {
     let prefixp: *const u8 = &prefix[0];
     let nprefix = prefix.len();
     let line_max_len = prefix.len() + DIGITS + 1;
-    for _ in 0..100_000_000 {
+    for _ in 0..10_000_000 {
         unsafe {
             prefixp.copy_to_nonoverlapping(bufp, nprefix);
             bufp = bufp.add(nprefix);

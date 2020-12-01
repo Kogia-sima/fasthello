@@ -27,7 +27,7 @@ int main() {
     int n;
  
     int num_len_increase = 1;
-    const unsigned int target = 100000000;
+    const unsigned int target = 10000000;
  
     while(i < target) {
         while(buf_index < sizeof(buffer) - line_max_len && i < target) {

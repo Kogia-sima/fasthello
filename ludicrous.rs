@@ -57,7 +57,7 @@ fn main() {
     let mut num_len = 1;
     let prefix = b"Hello, ";
     const LINE_MAX_LEN: usize = 17;
-    for _ in 0..100_000_000 {
+    for _ in 0..10_000_000 {
         buffer.extend(prefix);
         buffer.extend(&num[num.len() - num_len..]);
         num_len = num_len.max(increase_str_num(&mut num));
