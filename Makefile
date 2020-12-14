@@ -7,18 +7,16 @@ BENCHES = \
   target/release/ludicrous \
   target/release/serious
 
-CC = clang
-CPP = clang++
 CFLAGS = -Wall -O3
 
 all: $(BINS)
-	cargo build --release
+	RUSTFLAGS= cargo build --release
 
 ./turbo-c: turbo.c
 	$(CC) $(CFLAGS) -o turbo-c turbo.c
 
 ./lightning-cpp: lightning.cpp
-	$(CPP) $(CFLAGS) -o lightning-cpp lightning.cpp
+	$(CXX) $(CFLAGS) -o lightning-cpp lightning.cpp
 
 bench: $(BENCHES)
 	hyperfine --warmup 2 $(BENCHES) --export-markdown BENCH.md
