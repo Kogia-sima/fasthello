@@ -4,7 +4,7 @@ BENCHES = \
   target/release/fast target/release/speedy \
   target/release/turbo ./turbo-c \
   target/release/lightning ./lightning-cpp \
-  target/release/ludicrous \
+  target/release/ludicrous target/release/handy \
   target/release/serious
 
 CFLAGS = -Wall -O3

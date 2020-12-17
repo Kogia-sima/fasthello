@@ -20,6 +20,10 @@ name = "slow"
 path = "slow.rs"
 
 [[bin]]
+name = "handy"
+path = "handy.rs"
+
+[[bin]]
 name = "glacial"
 path = "glacial.rs"
 
