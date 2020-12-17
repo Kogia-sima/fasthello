@@ -34,7 +34,7 @@ impl Buffer {
 #[inline(always)]
 fn push_hello(buf: &mut Buffer, num: u32) {
     buf.enqueue(b"\tHello, ");
-    let _ = itoa::write(&mut buf.bytes, num).unwrap();
+    itoap::write_to_vec(&mut buf.bytes, num);
 }
 
 fn main() {
