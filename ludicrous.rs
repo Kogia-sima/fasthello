@@ -30,8 +30,7 @@ impl Buffer {
     }
 
     pub fn extend(&mut self, str: &[u8]) {
-        self.data[self.index..self.index + str.len()]
-            .copy_from_slice(str);
+        self.data[self.index..self.index + str.len()].copy_from_slice(str);
         self.index += str.len();
     }
 
@@ -63,8 +62,7 @@ fn main() {
         num_len = num_len.max(increase_str_num(&mut num));
         buffer.push(b'\t');
         if buffer.size() + LINE_MAX_LEN > BUFSIZ {
-            let _ =
-                stdout.write(&buffer.data[..buffer.size()]).unwrap();
+            let _ = stdout.write(&buffer.data[..buffer.size()]).unwrap();
             buffer.clear();
         }
     }
